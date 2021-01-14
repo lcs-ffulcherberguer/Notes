@@ -105,20 +105,54 @@ print ("Hello, world") //Values like this are callled Parameters
 ///greet("Taylor", nicely: false)
 
 
+
+
+
 //VARIDIC FUNCTION
 //Accept any number of parameters of the same type
 
-print("Haters", "gonna", "hate")
+///print("Haters", "gonna", "hate")
 
 //you can make a parameter varidic
 //By writing '...' after its type
 
-func square(numbers: Int...) {
-    for number in numbers {
-        print("\(number) squared is \(number * number)")
-    }
-}
+///func square(numbers: Int...) {
+    ///for number in numbers {
+        ///print("\(number) squared is \(number * number)")
+    ///}
+///}
 
 //Can be run with lots of numbers
 //Needs to be separated by a comma
-square(numbers: 1, 2, 3, 4, 5)
+
+///square(numbers: 1, 2, 3, 4, 5)
+
+
+
+
+
+//WRITING THROWING FUNCTIONS
+//Can use the throw keyword when something is wrong
+//first an enum needs to be defined
+
+enum PasswordError: Error {
+    case obvious
+}
+
+//checkPassword() function will be added
+//that will throw that error if something goes wrong. 
+func checkPassword(_ password: String) throws -> Bool {
+    if password == "password" {
+        throw PasswordError.obvious
+    }
+
+    return true
+}
+
+
+
+
+
+
+
+
