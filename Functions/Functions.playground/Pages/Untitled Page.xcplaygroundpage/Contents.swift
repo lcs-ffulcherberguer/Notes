@@ -27,8 +27,32 @@ print ("Hello, world") //Values like this are callled Parameters
 //The Int will be called number...
 //Number will be used inside he function when refering to the parameter
 //Number will also be used when runing the func
-func square(number: Int) { //This funtion will print the square of any number
-    print(number * number)
+
+/// func square(number: Int) { //This funtion will print the square of any number
+   /// print(number * number)
+///}
+
+///square(number: 8)
+
+
+//RETURNING VALUES
+//Functions can also send back data
+
+func square(number: Int) -> Int {
+    //use return to send a value back
+    return number * number
 }
 
-square(number: 8)
+let result = square(number: 8)
+print(result)
+
+
+
+
+
+
+
+
+
+
+
