@@ -79,12 +79,27 @@ print ("Hello, world") //Values like this are callled Parameters
 //OMITTING PARAMETER LABELS
 //you can use an underscore for your external parameter name
 
-func greet(_ person: String) {
-    print("Hello, \(person)!")
-}
+///func greet(_ person: String) {
+    ///print("Hello, \(person)!")
+///}
 
 //no need to use 'person'
+///greet("Taylor")
+
+
+
+//DEFAULT PARAMETERS
+//multiple calls to print() don’t all appear on the same line.
+//give your own parameters a default value:
+//writing an '=' after its type followed by the default you want to give it.
+
+func greet(_ person: String, nicely: Bool = true) {
+    if nicely == true {
+        print("Hello, \(person)!")
+    } else {
+        print("Oh no, it's \(person) again...")
+    }
+}
+
 greet("Taylor")
-
-
-
+greet("Taylor", nicely: false)
