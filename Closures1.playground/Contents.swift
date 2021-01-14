@@ -45,13 +45,32 @@ import Cocoa
 //CLOSURES AS PARAMETERS
 //You can pass closures into functions
 
-let driving = {
-    print("I'm driving in my car")
-}
+///let driving = {
+    ///print("I'm driving in my car")
+///}
 
 //specify the parameter type as () -> Void. That means “accepts no parameters, and returns Void”
+///func travel(action: () -> Void) {
+    ///print("I'm getting ready to go.")
+    ///action()
+    ///print("I arrived!")
+///}
+
+
+
+
+//TRAILING CLOSURE SYNTAX
+//Rather than pass in your closure as a parameter
+//you pass it directly after the function inside braces.
+
+
+//It accepts an action closure so that it can be run between two print()
 func travel(action: () -> Void) {
     print("I'm getting ready to go.")
     action()
     print("I arrived!")
+}
+
+travel {
+    print("I'm driving in my car")
 }
