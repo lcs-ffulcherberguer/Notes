@@ -5,11 +5,11 @@ import Cocoa
 //Functions can also breakup code
 func printHelp() {
     let message = """
-Welcome to MyApp!
+   Welcome to MyApp!
 
-Run this app inside a directory of images and
-MyApp will resize them all into thumbnails
-"""
+   Run this app inside a directory of images and
+   MyApp will resize them all into thumbnails
+   """
 
     print(message)
 }
@@ -35,18 +35,40 @@ print ("Hello, world") //Values like this are callled Parameters
 ///square(number: 8)
 
 
+
+
+
 //RETURNING VALUES
 //Functions can also send back data
 
-func square(number: Int) -> Int {
+///func square(number: Int) -> Int {
     //use return to send a value back
+    ///return number * number
+///}
+
+///let result = square(number: 8)
+///print(result)
+
+
+
+
+
+
+//PARAMETER LABEL
+  func square(number: Int) -> Int {
     return number * number
-}
+  }
 
-let result = square(number: 8)
-print(result)
+   let result = square(number: 8)
 
+//two names for each parameter
+//externally when calling the function and internally inside the function
+//externally: to // internally: name
+  func sayHello(to name: String) {
+    print("Hello, \(name)!")
+  }
 
+  sayHello(to: "Taylor")
 
 
 
