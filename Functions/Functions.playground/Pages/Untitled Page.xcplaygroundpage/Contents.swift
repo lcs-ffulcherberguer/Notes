@@ -135,24 +135,33 @@ print ("Hello, world") //Values like this are callled Parameters
 //Can use the throw keyword when something is wrong
 //first an enum needs to be defined
 
-enum PasswordError: Error {
-    case obvious
-}
+///enum PasswordError: Error {
+    ///case obvious
+///}
 
 //checkPassword() function will be added
 //that will throw that error if something goes wrong. 
-func checkPassword(_ password: String) throws -> Bool {
-    if password == "password" {
-        throw PasswordError.obvious
-    }
+///func checkPassword(_ password: String) throws -> Bool {
+    ///if password == "password" {
+        ///throw PasswordError.obvious
+    ///}
 
-    return true
+    ///return true
+///}
+
+
+
+
+//INOUT PARAMETERS
+//Your constant can be changed inside your function
+
+//you can’t use constant integers with inout
+func doubleInPlace(number: inout Int) {
+    number *= 2
 }
 
-
-
-
-
+var myNum = 10
+doubleInPlace(number: &myNum)
 
 
 
