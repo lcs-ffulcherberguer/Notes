@@ -93,13 +93,32 @@ print ("Hello, world") //Values like this are callled Parameters
 //give your own parameters a default value:
 //writing an '=' after its type followed by the default you want to give it.
 
-func greet(_ person: String, nicely: Bool = true) {
-    if nicely == true {
-        print("Hello, \(person)!")
-    } else {
-        print("Oh no, it's \(person) again...")
+///func greet(_ person: String, nicely: Bool = true) {
+    ///if nicely == true {
+        ///print("Hello, \(person)!")
+    ///} else {
+        ///print("Oh no, it's \(person) again...")
+    ///}
+///}
+
+///greet("Taylor")
+///greet("Taylor", nicely: false)
+
+
+//VARIDIC FUNCTION
+//Accept any number of parameters of the same type
+
+print("Haters", "gonna", "hate")
+
+//you can make a parameter varidic
+//By writing '...' after its type
+
+func square(numbers: Int...) {
+    for number in numbers {
+        print("\(number) squared is \(number * number)")
     }
 }
 
-greet("Taylor")
-greet("Taylor", nicely: false)
+//Can be run with lots of numbers
+//Needs to be separated by a comma
+square(numbers: 1, 2, 3, 4, 5)
