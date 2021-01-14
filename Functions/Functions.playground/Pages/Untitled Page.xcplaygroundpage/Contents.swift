@@ -156,12 +156,15 @@ print ("Hello, world") //Values like this are callled Parameters
 //Your constant can be changed inside your function
 
 //you can’t use constant integers with inout
-func doubleInPlace(number: inout Int) {
-    number *= 2
-}
+///func doubleInPlace(number: inout Int) {
+    ///number *= 2
+///}
 
-var myNum = 10
-doubleInPlace(number: &myNum)
+///var myNum = 10
+///doubleInPlace(number: &myNum)
+
+
+
 
 
 
