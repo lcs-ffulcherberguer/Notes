@@ -55,26 +55,36 @@ print ("Hello, world") //Values like this are callled Parameters
 
 
 //PARAMETER LABEL
-  func square(number: Int) -> Int {
-    return number * number
-  }
+  ///func square(number: Int) -> Int {
+    ///return number * number
+  ///}
 
-   let result = square(number: 8)
+   ///let result = square(number: 8)
 
 //two names for each parameter
 //externally when calling the function and internally inside the function
 //externally: to // internally: name
-  func sayHello(to name: String) {
-    print("Hello, \(name)!")
-  }
 
-  sayHello(to: "Taylor")
+  ///func sayHello(to name: String) {
+    ///print("Hello, \(name)!")
+  ///}
 
-
-
+  ///sayHello(to: "Taylor")
 
 
 
+
+
+
+//OMITTING PARAMETER LABELS
+//you can use an underscore for your external parameter name
+
+func greet(_ person: String) {
+    print("Hello, \(person)!")
+}
+
+//no need to use 'person'
+greet("Taylor")
 
 
 
