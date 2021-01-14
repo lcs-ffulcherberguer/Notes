@@ -10,12 +10,32 @@ import Cocoa
 ///driving()
 
 
-//ACCEPTING PARAMETERS IN CLOSURE
+
+//ACCEPTING PARAMETERS IN  A CLOSURE
 //Parameters are listed inside the open braces
+
+///let driving = { (place: String) in
+    ///print("I'm going to \(place) in my car")
+///}
+
+//you don't need parameter labels when running closures
+///driving("London")
+
+
+
+//RETURNING VALUES FROM A CLOSURE
+//it has to be added inside your closure
+//before the in keyword
 
 let driving = { (place: String) in
     print("I'm going to \(place) in my car")
 }
 
-//you don't need parameter labels when running closures
-driving("London")
+//Use string -> before in
+//if you want a closure that returns a string
+let drivingWithReturn = { (place: String) -> String in
+    return "I'm going to \(place) in my car"
+}
+
+let message = drivingWithReturn("London")
+print(message)
