@@ -15,3 +15,20 @@ MyApp will resize them all into thumbnails
 }
 
 printHelp()
+
+
+//PARAMETERS
+print ("Hello, world") //Values like this are callled Parameters
+
+//To make a function to accept a paremeter you need:
+//give each parameter a name,then a colon, then tell Swift the type of data it must be.
+
+
+//The Int will be called number...
+//Number will be used inside he function when refering to the parameter
+//Number will also be used when runing the func
+func square(number: Int) { //This funtion will print the square of any number
+    print(number * number)
+}
+
+square(number: 8)
