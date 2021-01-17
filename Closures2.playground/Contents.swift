@@ -50,13 +50,30 @@ import Cocoa
 //ADVANCED CLOSURES
 //CLOSURES WITH MULTIPLE PARAETERS
 
-func travel(action: (String, Int) -> String) {
-    print("I'm getting ready to go.")
-    let description = action("London", 60)
-    print(description)
-    print("I arrived!")
+///func travel(action: (String, Int) -> String) {
+    ///print("I'm getting ready to go.")
+    ///let description = action("London", 60)
+    ///print(description)
+    ///print("I arrived!")
+///}
+
+///travel {
+    ///"I'm going to \($0) at \($1) miles per hour."
+///}
+
+
+//RETURNING CLOSURES FROM FUNCTIONS
+//because it uses -> twice
+//once to specify your function’s return value
+//and a second time to specify your closure’s return value.
+
+func travel() -> (String) -> Void {
+    return {
+        print("I'm going to \($0)")
+    }
 }
 
-travel {
-    "I'm going to \($0) at \($1) miles per hour."
-}
+let result = travel()
+result("London")
+
+let result2 = travel()("London")
