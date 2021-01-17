@@ -27,6 +27,7 @@
 		1C2F708725ADF4FB000302A8 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		1C2F708F25ADF52B000302A8 /* Functions.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Functions.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1C8EDF4325B0AFC300DE0667 /* Closures1.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closures1.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1C8EDF4525B4D82A00DE0667 /* Closures2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Closures2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +44,7 @@
 		1C2F707B25ADF4FB000302A8 = {
 			isa = PBXGroup;
 			children = (
+				1C8EDF4525B4D82A00DE0667 /* Closures2.playground */,
 				1C8EDF4325B0AFC300DE0667 /* Closures1.playground */,
 				1C8EDF3D25AFC8DE00DE0667 /* Functions */,
 				1C2F708625ADF4FB000302A8 /* Notes */,
