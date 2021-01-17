@@ -35,13 +35,28 @@ import Cocoa
 //SHORTHAND PARAMETER NAMES
 //That closure is then run between two calls to print().
 
-func travel(action: (String) -> String) {
+///func travel(action: (String) -> String) {
+    ///print("I'm getting ready to go.")
+    ///let description = action("London")
+    ///print(description)
+    ///print("I arrived!")
+///}
+
+///travel {
+    ///"I'm going to \($0) in my car"
+///}
+
+
+//ADVANCED CLOSURES
+//CLOSURES WITH MULTIPLE PARAETERS
+
+func travel(action: (String, Int) -> String) {
     print("I'm getting ready to go.")
-    let description = action("London")
+    let description = action("London", 60)
     print(description)
     print("I arrived!")
 }
 
 travel {
-    "I'm going to \($0) in my car"
+    "I'm going to \($0) at \($1) miles per hour."
 }
