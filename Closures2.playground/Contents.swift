@@ -20,6 +20,21 @@ import Cocoa
 //'Void' can be used with any type of data to force the closure to return a value.
 //This closure closure in turn accepts a string and returns a string
 
+///func travel(action: (String) -> String) {
+    ///print("I'm getting ready to go.")
+    ///let description = action("London")
+    ///print(description)
+    ///print("I arrived!")
+///}
+
+///travel { (place: String) -> String in
+    ///return "I'm going to \(place) in my car"
+///}
+
+
+//SHORTHAND PARAMETER NAMES
+//That closure is then run between two calls to print().
+
 func travel(action: (String) -> String) {
     print("I'm getting ready to go.")
     let description = action("London")
@@ -27,9 +42,6 @@ func travel(action: (String) -> String) {
     print("I arrived!")
 }
 
-travel { (place: String) -> String in
-    return "I'm going to \(place) in my car"
+travel {
+    "I'm going to \($0) in my car"
 }
-
-
-
