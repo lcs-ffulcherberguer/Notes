@@ -58,13 +58,33 @@ import Cocoa
 //METHODS
 //Functions inside structs are called methods
 
-struct City {
-    var population: Int
+///struct City {
+    ///var population: Int
 
-    func collectTaxes() -> Int {
-        return population * 1000
+    ///func collectTaxes() -> Int {
+        ///return population * 1000
+    ///}
+///}
+
+///let london = City(population: 9_000_000)
+///london.collectTaxes()
+
+
+
+//MUTATION METHODS
+//When you want to change a property inside a method
+//you need to mark it using the 'mutating' keyword
+
+struct Person {
+    var name: String
+
+    mutating func makeAnonymous() {
+        name = "Anonymous"
     }
 }
 
-let london = City(population: 9_000_000)
-london.collectTaxes()
+//it changes the property
+//Swift will only allow that method to be called on Person instances that are variables
+
+var person = Person(name: "Ed")
+person.makeAnonymous()
