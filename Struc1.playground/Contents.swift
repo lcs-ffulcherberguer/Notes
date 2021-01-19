@@ -3,15 +3,15 @@ import Cocoa
 //CREATING STRUCTS
 //this is a struct with one property
 //this defines the type
-///struct Sport {
-    ///var name: String
-///}
+struct Sport {
+    var name: String
+}
 
 //made both name and tennis variable
-///var tennis = Sport(name: "Tennis")
-///print(tennis.name)
+var tennis = Sport(name: "Tennis")
+print(tennis.name)
 
-///tennis.name = "Lawn tennis"
+tennis.name = "Lawn tennis"
 
 
 
@@ -112,18 +112,18 @@ import Cocoa
 //PROPERTIES AND METHODS OF ARRAYS
 //Arrays have their own methods and properties
 
-var toys = ["Woody"]
+///var toys = ["Woody"]
 
 //read the number of items in an array using its 'count' property
-print(toys.count)
+///print(toys.count)
 
 //add a new item, use the 'append()' method
-toys.append("Buzz")
+///toys.append("Buzz")
 
 // locate any item inside an array using its 'firstIndex()' method
-toys.firstIndex(of: "Buzz")
+///toys.firstIndex(of: "Buzz")
 
-print(toys.sorted())
+///print(toys.sorted())
 
 //if you want to remove an item, use the 'remove()' method
-toys.remove(at: 0)
+///toys.remove(at: 0)
