@@ -3,17 +3,17 @@ import Cocoa
 //USING CLOSURE AS PARAMETERS WHEN THEY ACCEPT PARAMETERS
 //a closure you pass into a function can also accept its own parameters.
 
-///func travel(action: (String) -> Void) {
-    ///print("I'm getting ready to go.")
-    ///action("London")
-    ///print("I arrived!")
-///}
+func travel(action: (String) -> Void) {
+    print("I'm getting ready to go.")
+    action("London")
+    print("I arrived!")
+}
 
 //Now our closure is required to ccept a string
 
-///travel { (place: String) in
-    ///print("I'm going to \(place) in my car")
-///}
+travel { (place: String) in
+    print("I'm going to \(place) in my car")
+}
 
 
 //USING CLOSURES AS PARAMETERS WHEN THEY RETURN VALUES
@@ -67,13 +67,16 @@ import Cocoa
 //once to specify your function’s return value
 //and a second time to specify your closure’s return value.
 
-func travel() -> (String) -> Void {
-    return {
-        print("I'm going to \($0)")
-    }
-}
+///func travel() -> (String) -> Void {
+    ///return {
+        ///print("I'm going to \($0)")
+    ///}
+///}
 
-let result = travel()
-result("London")
+///let result = travel()
+///result("London")
 
-let result2 = travel()("London")
+///let result2 = travel()("London")
+
+
+
