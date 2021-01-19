@@ -75,16 +75,37 @@ import Cocoa
 //When you want to change a property inside a method
 //you need to mark it using the 'mutating' keyword
 
-struct Person {
-    var name: String
+///struct Person {
+    ///var name: String
 
-    mutating func makeAnonymous() {
-        name = "Anonymous"
-    }
-}
+    ///mutating func makeAnonymous() {
+        ///name = "Anonymous"
+    ///}
+///}
 
 //it changes the property
 //Swift will only allow that method to be called on Person instances that are variables
 
-var person = Person(name: "Ed")
-person.makeAnonymous()
+///var person = Person(name: "Ed")
+///person.makeAnonymous()
+
+
+
+//PROPERTIES AND METHODS OF STRING
+
+let string = "Do or do not, there is no try."
+
+//You can read the number of characters in a string using its 'count' property
+print(string.count)
+
+//They have a hasPrefix() method that returns true if the string starts with specific letters:
+print(string.hasPrefix("Do"))
+
+//You can uppercase a string by calling its uppercased() method
+print(string.uppercased())
+
+//you can even have Swift sort the letters of the string into an array:
+print(string.sorted())
+
+
+
