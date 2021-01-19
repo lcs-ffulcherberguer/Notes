@@ -93,19 +93,37 @@ import Cocoa
 
 //PROPERTIES AND METHODS OF STRING
 
-let string = "Do or do not, there is no try."
+///let string = "Do or do not, there is no try."
 
 //You can read the number of characters in a string using its 'count' property
-print(string.count)
+///print(string.count)
 
 //They have a hasPrefix() method that returns true if the string starts with specific letters:
-print(string.hasPrefix("Do"))
+///print(string.hasPrefix("Do"))
 
 //You can uppercase a string by calling its uppercased() method
-print(string.uppercased())
+///print(string.uppercased())
 
 //you can even have Swift sort the letters of the string into an array:
-print(string.sorted())
+///print(string.sorted())
 
 
 
+//PROPERTIES AND METHODS OF ARRAYS
+//Arrays have their own methods and properties
+
+var toys = ["Woody"]
+
+//read the number of items in an array using its 'count' property
+print(toys.count)
+
+//add a new item, use the 'append()' method
+toys.append("Buzz")
+
+// locate any item inside an array using its 'firstIndex()' method
+toys.firstIndex(of: "Buzz")
+
+print(toys.sorted())
+
+//if you want to remove an item, use the 'remove()' method
+toys.remove(at: 0)
