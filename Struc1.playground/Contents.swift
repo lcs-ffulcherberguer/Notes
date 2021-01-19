@@ -39,20 +39,32 @@ import Cocoa
 //Property observers let you run code before or after any property changes
 // This will run some code every time amount changes:
 
-struct Progress {
-    var task: String
-    var amount: Int {
-        didSet {
-            print("\(task) is now \(amount)% complete")
-        }
-    }
-}
+///struct Progress {
+    ///var task: String
+    ///var amount: Int {
+        ///didSet {
+            ///print("\(task) is now \(amount)% complete")
+        ///}
+    ///}
+///}
 
-var progress = Progress(task: "Loading data", amount: 0)
-progress.amount = 30
-progress.amount = 80
-progress.amount = 100
+///var progress = Progress(task: "Loading data", amount: 0)
+///progress.amount = 30
+///progress.amount = 80
+///progress.amount = 100
 
   
     
+//METHODS
+//Functions inside structs are called methods
 
+struct City {
+    var population: Int
+
+    func collectTaxes() -> Int {
+        return population * 1000
+    }
+}
+
+let london = City(population: 9_000_000)
+london.collectTaxes()
