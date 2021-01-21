@@ -81,22 +81,37 @@ import Cocoa
 //if we had a Student struct
 //we could create several student instances each with their own properties and methods
 
-struct Student {
-    static var classSize = 0
-    var name: String
+///struct Student {
+    ///static var classSize = 0
+    ///var name: String
 
-    init(name: String) {
-        self.name = name
-        Student.classSize += 1
+    ///init(name: String) {
+        ///self.name = name
+        ///Student.classSize += 1
+    ///}
+///}
+
+///let ed = Student(name: "Ed")
+///let taylor = Student(name: "Taylor")
+///print(Student.classSize)
+
+
+
+//ACCESS CONTROL
+//restrict which code can use properties and methods.
+
+struct Person {
+    private var id: String
+
+    init(id: String) {
+        self.id = id
     }
+    
+    func identify() -> String {
+            return "My social security number is \(id)"
+        }
+    
 }
-
-let ed = Student(name: "Ed")
-let taylor = Student(name: "Taylor")
-print(Student.classSize)
-
-
-
 
 
 
