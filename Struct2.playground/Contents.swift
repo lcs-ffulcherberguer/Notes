@@ -45,32 +45,59 @@ import Cocoa
 //LAZY PROPERTIES
 //Swift lets you create some properties only when they are needed.
 
-struct FamilyTree {
-    init() {
-        print("Creating family tree!")
-    }
-}
+///struct FamilyTree {
+    ///init() {
+        ///print("Creating family tree!")
+    ///}
+///}
 
 //We might use that FamilyTree struct as a property inside a Person struct
 
-struct Person {
-    var name: String
+///struct Person {
+    ///var name: String
 
     //add the lazy keyword to the familyTree property
     //Swift will only create the FamilyTree struct when it’s first accessed
 
-    lazy var familyTree = FamilyTree()
+    ///lazy var familyTree = FamilyTree()
     
-    init(name: String) {
-        self.name = name
-    }
-}
+    ///init(name: String) {
+        ///self.name = name
+    ///}
+///}
 
-var ed = Person(name: "Ed")
+///var ed = Person(name: "Ed")
 
 //you need to access the property at least once
 //if you want to see the “Creating family tree!” message
 
-ed.familyTree
+///ed.familyTree
+
+
+
+
+
+//STATIC PROPERTIES ND METHODS
+//if we had a Student struct
+//we could create several student instances each with their own properties and methods
+
+struct Student {
+    static var classSize = 0
+    var name: String
+
+    init(name: String) {
+        self.name = name
+        Student.classSize += 1
+    }
+}
+
+let ed = Student(name: "Ed")
+let taylor = Student(name: "Taylor")
+print(Student.classSize)
+
+
+
+
+
 
 
